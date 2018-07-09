@@ -36,4 +36,12 @@ class TransactionController extends Controller
         }
         return $trasanction;
     }
+    public function show()
+    {
+        $transaction = User::all();
+        for($i=0; $i<sizeof($transaction); $i++){
+            $transaction[$i]['transations'] = $transaction[$i]->transactions;
+        }
+        return $transaction;
+    }
 }

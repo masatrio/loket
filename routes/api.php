@@ -25,4 +25,5 @@ Route::group(['middleware' => ['cors']], function() {
   Route::post('/event/ticket/create', 'TicketController@create');
   Route::get('/event/get_info', 'EventController@show');
   Route::post('/transaction/purchase', 'TransactionController@create');
+  Route::get('/transaction/get_info', 'TransactionController@show');
 });
